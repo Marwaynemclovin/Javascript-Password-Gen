@@ -30,6 +30,13 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+ul {
+  list-style: none;
+  justify-content: left;
+  padding: 0;
+}
+
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -95,6 +102,44 @@ button[disabled] {
 
 .float-right {
   float: right;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.range-amount{
+  display: inline;
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: hsl(360, 91%, 36%);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: hsl(360, 91%, 36%);
+  cursor: pointer;
 }
 
 #password {

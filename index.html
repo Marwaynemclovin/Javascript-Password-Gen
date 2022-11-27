@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -26,6 +26,22 @@
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
+          <button id="copy" class="btn">Copy to Clipboard</button>
+          <!-- <input type="button" id="popupbutton" onclick="popup(this)"/> -->
+        </div>
+        <div class="card-header">
+          <h2>Password Customisation</h2>
+          <p>Minimum Value = 8 <br> Maximum Value = 120</p>
+          <div class="slidecontainer">
+            <input class="range-amount" id="amount" oninput="slider.value=amount.value" type="text" value="8">
+            <input class="slider" id="slider" oninput="amount.value=slider.value" type="range" min="8" max="120" value="8"  >
+          </div>
+          <ul id="checkBundle">
+            <li><label><input type="checkbox" />Lowercase</label>
+            <li><label><input type="checkbox" />Uppercase</label>
+            <li><label><input type="checkbox" />Numerical</label>
+            <li><label><input type="checkbox" />Special Characters</label>
+         </ul>
         </div>
       </div>
     </div>
