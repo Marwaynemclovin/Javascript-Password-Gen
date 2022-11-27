@@ -31,16 +31,16 @@
         </div>
         <div class="card-header">
           <h2>Password Customisation</h2>
-          <p>Minimum Value = 8 <br> Maximum Value = 120</p>
+          <p>Minimum Value = 8 <br> Maximum Value = 128</p>
           <div class="slidecontainer">
             <input class="range-amount" id="amount" oninput="slider.value=amount.value" type="text" value="8">
-            <input class="slider" id="slider" oninput="amount.value=slider.value" type="range" min="8" max="120" value="8"  >
+            <input class="slider" id="slider" oninput="amount.value=slider.value" type="range" min="8" max="128" value="8"  >
           </div>
           <ul id="checkBundle">
-            <li><label><input type="checkbox" />Lowercase</label>
-            <li><label><input type="checkbox" />Uppercase</label>
-            <li><label><input type="checkbox" />Numerical</label>
-            <li><label><input type="checkbox" />Special Characters</label>
+            <li><label><input id=":lowercase" type="checkbox" />Lowercase</label>
+            <li><label><input id="uppercase" type="checkbox" />Uppercase</label>
+            <li><label><input id="numerical" type="checkbox" />Numerical</label>
+            <li><label><input id="special-char" type="checkbox" />Special Characters</label>
          </ul>
         </div>
       </div>
