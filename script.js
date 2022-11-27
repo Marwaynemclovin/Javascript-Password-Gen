@@ -1,16 +1,9 @@
 // Assignment code here
-
+var password=document.getElementById("password");
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-function popup() {
-  var popwindow = document.getElementById("checkBundle");
-  if (popwindow.style.display === "none") {
-      popwindow.style.display = "block";
- } else {
-       popwindow.style.display = "none";
-   }
-};
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
