@@ -9,9 +9,9 @@ const addSpecialCharacter = document.querySelector("#special-char");
 const generateButton = document.querySelector("#generate");
 const copyClip = document.querySelector("#copy");
 
-// // // Listening for Password Change
+// Listening for Password Change
 // amount.addEventListener("change", (event) => {
-//   // passwordLength.innerText = event.target.value;
+// passwordLength.innerText = event.target.value;
 // });
 
 // Listening for Copy to Clipboard
@@ -20,12 +20,12 @@ copyClip.addEventListener("click", () => {
 });
 
 generateButton.addEventListener("click", () => {
-  const amount = amount.value;
+  // const amount = amount.value;
   const upperCase = addUpperCase.checked;
   const lowerCase = addLowerCase.checked;
   const numerical = addNumerical.checked;
   const specialCharacter = addSpecialCharacter.checked;
-  password.value = generatePassword(upperCase, lowerCase, numerical, specialCharacter, amount);
+  password.value = generatePassword(upperCase, lowerCase, numerical, specialCharacter);
   // Add amount above ^
 });
 
@@ -34,7 +34,7 @@ function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
   let generatedPassword = "";
   let variationsCount = [upperCase, lowerCase, numerical, specialCharacter].length;
 
-  for (let i = 0; i < length; i += variationsCount) {
+  for (let i = 0; i < amount; i += variationsCount) {
     if (upperCase) {
       generatedPassword += getRandomUpperCase();
     }
@@ -44,10 +44,12 @@ function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
     if (numerical) {
       generatedPassword += getRandomNumeral();
     }
+    if (specialCharacter) {
       generatedPassword += getRandomSpecialCharacter();
     }
 
-    const finalPassword = generatedPassword.slice(0, length);
+
+    const finalPassword = generatedPassword.slice(0, amount);
     
     return finalPassword;
   }
@@ -71,6 +73,7 @@ function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
   var specialCharacter = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
   return specialCharacter[Math.floor(Math.random()*specialCharacter.length)]
  }
+}
 
 
 // // Get references to the #generate element
