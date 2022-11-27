@@ -1,6 +1,6 @@
 // Try and put something that says when press generate with no tick, please click checkbox
 const password = document.querySelector("#password");
-const amount = document.querySelector("#range.amount");
+const amount = document.querySelector("#amount");
 // const passwordLength = document.querySelector("#passLength");
 const addLowerCase = document.querySelector("#lowercase");
 const addUpperCase = document.querySelector("#uppercase");
@@ -34,7 +34,7 @@ function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
   let generatedPassword = "";
   let variationsCount = [upperCase, lowerCase, numerical, specialCharacter].length;
 
-  for (let i = 0; i < amount; i += variationsCount) {
+  for (let i = 0; i < length; i += variationsCount) {
     if (upperCase) {
       generatedPassword += getRandomUpperCase();
     }
@@ -49,7 +49,7 @@ function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
     }
 
 
-    const finalPassword = generatedPassword.slice(0, amount);
+    const finalPassword = generatedPassword.slice(0, length);
     
     return finalPassword;
   }
