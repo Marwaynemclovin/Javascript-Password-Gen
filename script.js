@@ -1,16 +1,17 @@
+// Try and put something that says when press generate with no tick, please click checkbox
 const password = document.querySelector("#password");
-const amount = document.querySelector("#amount");
-const passwordLength = document.querySelector("#amount");
+const amount = document.querySelector("#range.amount");
+// const passwordLength = document.querySelector("#passLength");
 const addLowerCase = document.querySelector("#lowercase");
 const addUpperCase = document.querySelector("#uppercase");
 const addNumerical = document.querySelector("#numerical");
-const addSpecialChar = document.querySelector("#special-char");
+const addSpecialCharacter = document.querySelector("#special-char");
 const generateButton = document.querySelector("#generate");
 const copyClip = document.querySelector("#copy");
 
-// // Listening for Password Change
-// passLength.addEventListener("change", (event) => {
-//   passLengthResult.innerText = event.target.value;
+// // // Listening for Password Change
+// amount.addEventListener("change", (event) => {
+//   // passwordLength.innerText = event.target.value;
 // });
 
 // Listening for Copy to Clipboard
@@ -20,18 +21,18 @@ copyClip.addEventListener("click", () => {
 
 generateButton.addEventListener("click", () => {
   // const length = amount.value;
-  const upperCase = addUpperCase;
-  const lowerCase = addLowerCase;
+  const upperCase = addUpperCase.checked;
+  const lowerCase = addLowerCase.checked;
   const numerical = addNumerical.checked;
-  const symbols = addSpecialChar.checked;
-  password.value = generatePassword(upperCase, lowerCase, numerical, symbols);
+  const specialCharacter = addSpecialCharacter.checked;
+  password.value = generatePassword(upperCase, lowerCase, numerical, specialCharacter);
 });
 
-function generatePassword(upperCase, lowerCase, numerical, symbols){
+function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
   let generatedPassword="";
-  let varationsCount = [upperCase, lowerCase, numerical, symbols].length;
+  let varationsCount = [upperCase, lowerCase, numerical, specialCharacter].length;
 
-  for (let i = 0; i < length; i += variationsCount) {
+  for (let i = 8; i < length; i += variationsCount) {
     if (upperCase) {
       generatedPassword += getRandomUpperCase();
     }
@@ -41,35 +42,36 @@ function generatePassword(upperCase, lowerCase, numerical, symbols){
     if (numerical){
       generatedPassword += getRandomNumeral();
     }
-    { if (specialChar)
-      generatedPassword += getRandomSpecialChar();
+    { if (specialCharacter)
+      generatedPassword += getRandomSpecialCharacter();
     }
 
-    const finalPassword = generatePassword.slice(0, length);
+    const finalPassword = generatePassword.slice(8, length);
     
     return finalPassword;
   }
+}
 
  function getRandomLowerCase () {
-  var lowerCasedCharacters = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  return lowerCasedCharacters[Math.floor(Math.random()*lowerCasedCharacters.length)]
+  var lowerCasedCharacter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  return lowerCasedCharacter[Math.floor(Math.random()*lowerCasedCharacter.length)]
  }
 
  function getRandomUpperCase () {
-  var upperCasedCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-  return upperCasedCharacters[Math.floor(Math.random()*UpperrCasedCharacters.length)]
+  var upperCasedCharacter = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  return upperCasedCharacter[Math.floor(Math.random()*upperCasedCharacter.length)]
  }
 
  function getRandomNumeral () {
-  var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  return numericCharacters[Math.floor(Math.random()*numericCharacters.length)]
+  var numericCharacter = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  return numericCharacter[Math.floor(Math.random()*numericCharacter.length)]
  }
 
- function getRandomSpecialChar () {
-  var specialCharacters = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
-  return specialCharacters[Math.floor(Math.random()*numericCharacters.length)]
+ function getRandomSpecialCharacter () {
+  var specialCharacter = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
+  return specialCharacter[Math.floor(Math.random()*specialCharacter.length)]
  }
-}
+
 
 // // Get references to the #generate element
 // var generateBtn = document.querySelector("#generate");
