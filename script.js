@@ -20,37 +20,37 @@ copyClip.addEventListener("click", () => {
 });
 
 generateButton.addEventListener("click", () => {
-  // const length = amount.value;
+  const amount = amount.value;
   const upperCase = addUpperCase.checked;
   const lowerCase = addLowerCase.checked;
   const numerical = addNumerical.checked;
   const specialCharacter = addSpecialCharacter.checked;
-  password.value = generatePassword(upperCase, lowerCase, numerical, specialCharacter);
+  password.value = generatePassword(upperCase, lowerCase, numerical, specialCharacter, amount);
+  // Add amount above ^
 });
 
+// Add amount below
 function generatePassword(upperCase, lowerCase, numerical, specialCharacter){
-  let generatedPassword="";
-  let varationsCount = [upperCase, lowerCase, numerical, specialCharacter].length;
+  let generatedPassword = "";
+  let variationsCount = [upperCase, lowerCase, numerical, specialCharacter].length;
 
-  for (let i = 8; i < length; i += variationsCount) {
+  for (let i = 0; i < length; i += variationsCount) {
     if (upperCase) {
       generatedPassword += getRandomUpperCase();
     }
     if (lowerCase) {
       generatedPassword += getRandomLowerCase();
     }
-    if (numerical){
+    if (numerical) {
       generatedPassword += getRandomNumeral();
     }
-    { if (specialCharacter)
       generatedPassword += getRandomSpecialCharacter();
     }
 
-    const finalPassword = generatePassword.slice(8, length);
+    const finalPassword = generatedPassword.slice(0, length);
     
     return finalPassword;
   }
-}
 
  function getRandomLowerCase () {
   var lowerCasedCharacter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
