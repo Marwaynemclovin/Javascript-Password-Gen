@@ -7,15 +7,20 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
+
+  <!-- Start of Main Body -->
   <body>
+    <!-- Header Section -->
     <div class="wrapper">
       <header>
         <h1>Password Generator</h1>
       </header>
+      <!-- Start of Main Conent -->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <!-- Start of Password Generator -->
         <div class="card-body">
           <textarea
             readonly
@@ -24,14 +29,20 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <!-- Generator button -->
         <div class="card-footer">
           <button class="button" type="button" onclick="generatePassword()">Generate</button>
         </div>
+        <!-- Start of Customisation -->
         <div class="card-header">
             <h2>Password Customisation</h2>
-              <label for="length">Password Length Between 8 - 128</label>
-              <span id="passwordLengthDisplay">8</span>
+            <!-- Slider display count -->
+              <p>Amount of Characters in Password:
+                <span id="passwordLengthDisplay">8</span>
+              </p>
+              <!-- Slider -->
                <input type="range" class="slider" id ="length" min="8" max="128">
+               <!-- Checkboxes -->
            <ul id="checkBundle">
             <li>
               <label>
