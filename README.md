@@ -19,12 +19,13 @@ When looking at today's constant data breaches, the desire and need for password
 Feel free to download or clone via your favourite code editor!
 
 ## File Structure
+'''bash
 ├── assets
 |  └── style.css
 |__ README.md
 ├── index.html
 └── script.js
-
+'''
 ## Credits and Resources
 The initial repository was created by Xander Rapstine! Link to their GitHub profile is below:
 https://github.com/Xandromus
