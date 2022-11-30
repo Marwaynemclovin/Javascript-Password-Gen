@@ -4,13 +4,16 @@ When looking at today's constant data breaches, the desire and need for password
 
 ## Screenshots of Application
 [Top Half of Deployed Application]
+<img width="1461" alt="Screen Shot 2022-11-30 at 4 55 22 pm" src="https://user-images.githubusercontent.com/112296194/204732082-afa20f48-47ef-4242-b5fe-ccc44ac2fb50.png">
 
 [Bottom Half of Deployed Application]
+<img width="1452" alt="Screen Shot 2022-11-30 at 4 55 31 pm" src="https://user-images.githubusercontent.com/112296194/204732150-468c43c5-1928-4f30-88fc-129ce184e050.png">
 
 ## Local Installation
 Feel free to download or clone via your favourite code editor!
 
 ## Credits
+
 The initial repository was created by Xander Rapstine! Link to their GitHub profile is below:
 https://github.com/Xandromus
 
