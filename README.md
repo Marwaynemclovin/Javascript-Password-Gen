@@ -12,8 +12,13 @@ When looking at today's constant data breaches, the desire and need for password
 ## Local Installation
 Feel free to download or clone via your favourite code editor!
 
-## Credits
+## File Structure
+├── assets
+|  └── style.css
+├── index.html
+└── README.md
 
+## Credits and Resources
 The initial repository was created by Xander Rapstine! Link to their GitHub profile is below:
 https://github.com/Xandromus
 
