@@ -3,10 +3,14 @@
 When looking at today's constant data breaches, the desire and need for passwords which are unable to be cracked are necessary. I thought about taking my JavaScript skills to the next level, to create a random password generator, which has the ability to include the alphabet (both uppcase and lowerase), numbers, and special characters. The last two are important as some passwords are unable to have one or the other. The generator works in pair with a slider, giving users the ability to pick the amount of characters. 
 
 ## Table of Contents
-*[Screenshots of Application](#Screenshots-of-Application)
-*[Local Installation](#Local-Installation)
-*[File Structure](#File-Structure)
-*[Credits and Resources](#Credits-and-Resources)
+[Screenshots of Application](#Screenshots-of-Application)
+-----
+[Local Installation](#Local-Installation)
+-----
+[File Structure](#File-Structure)
+-----
+[Credits and Resources](#Credits-and-Resources)
+-----
 
 ## Screenshots of Application
 [Top Section of Deployed Application]
