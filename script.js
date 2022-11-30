@@ -4,6 +4,18 @@ var numericCharacter = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specialCharacter = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
 var passwordOutput = document.querySelector("#password");
 
+//Slider
+const slider = document.getElementById("length");
+const output = document.getElementById("passwordLengthDisplay");
+output.innerHTML = slider.value; // Display the default slider value
+
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  pwLength = this.value;
+}
+
 function generatePassword()
 {
   // Checks for Checkboxes
