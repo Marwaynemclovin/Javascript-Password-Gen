@@ -7,6 +7,7 @@ When looking at today's constant data breaches, the desire and need for password
 *[Local Installation]  (#Local-Installation)
 *[File Structure]  (#File-Structure)
 *[Credits and Resources] (#Credits-and-Resources)
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Screenshots of Application
 [Top Section of Deployed Application]
